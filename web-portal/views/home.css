@@ -6,7 +6,7 @@
 #dtable img:hover {
   height: inherit;
   position: absolute;
-  z-index: 999;
+  z-index: var(--modal);
 }
 #dtable td {
   vertical-align: middle;

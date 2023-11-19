@@ -41,6 +41,11 @@ if (document.querySelector('body#home')) {
     module.home.init()
   })
 }
+if (document.querySelector('body#post')) {
+  import('../views/post/post.js').then((module) => {
+    module.post.init()
+  })
+}
 if (document.querySelector('body#privacy')) {
   import('../views/privacy/privacy.js').then((module) => {
     module.privacy.init()

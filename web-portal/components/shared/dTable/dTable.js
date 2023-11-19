@@ -104,8 +104,8 @@ const buildRows = (rows) => {
     const $tr = document.createElement('tr')
     // APIRELATED
     $tr.innerHTML = `
-      <td><img src="/assets/images/posts/in-post-${row.id}.png"/></td>
-      <td>${row.id}</td>
+      <td><img src="/assets/images/posts/in-post-${row.id}.png" alt="${row.name} post preview"/></td>
+      <td><a href="/post/${row.id}" title="Go to post: ${row.id}">${row.id}</a></td>
       <td>${row.name}</td>
       <td>${new Date(row.published).toLocaleDateString()}</td>
     `

@@ -2,6 +2,15 @@ module.exports = app => {
   app.get('/', (req, res) => {
     res.render('home', { id: 'home', title: 'Home', url: req.url })
   })
+  app.get('/post/:id', (req, res) => {
+    const postId = req.params.id
+    const breadcrumbs = [
+      {
+        name: `Post - ${postId}`
+      }
+    ]
+    res.render('post/post', { id: 'post', title: 'Post', url: req.url, postId, breadcrumbs })
+  })
   app.get('/contacts', (req, res) => {
     const breadcrumbs = [
       {
