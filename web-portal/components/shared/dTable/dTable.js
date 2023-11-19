@@ -15,7 +15,7 @@ const $filters = $tHeader.querySelectorAll('input')
 let filterTimer
 
 const tConfig = { // APIRELATED
-  url: 'http://localhost:8080/matches',
+  url: '/assets/data/posts.json',
   limit: 25,
   page: 0,
   total: undefined,
@@ -105,13 +105,7 @@ const buildRows = (rows) => {
     // APIRELATED
     $tr.innerHTML = `
       <td>${row.id}</td>
-      <td>${row.player1.name}</td>
-      <td>${row.player2.name}</td>
-      <td>${row.score}</td>
-      <td>${row.tournament.name}</td>
-      <td>${row.tournament.value}</td>
-      <td>${row.surface}</td>
-      <td>${dateFilter(row.createdAt)}</td>
+      <td>${row.name}</td>
     `
     // APIRELATED
     $tBody.appendChild($tr)
@@ -158,7 +152,7 @@ const loadRowsData = async () => {
       return response.json()
     })
     .then((json) => {
-      buildRows(json.matches) // APIRELATED
+      buildRows(json.posts) // APIRELATED
       tConfig.total = json.total // APIRELATED
       tConfig.pages = Math.ceil(tConfig.total / tConfig.limit)
       tConfig.end = tConfig.limit * (tConfig.page + 1)
