@@ -2,27 +2,23 @@
 
 :root {
   --black: #222222;
-  --gray: #777777;
   --white: #EEEEEE;
-  --blue: #5180df;
+  --gray: #777777;
+  --blue: #2968e6;
   --red: #dd2e2e;
-  --orange: #db700c;
+  --orange: #df710a;
   --green: #3b6936;
-
   --footer: #255877;
-  --footer-height: 2.4rem;
-
+  --footer-height: 2rem;
   --small: .3rem;
   --medium: .7rem;
   --large: 1rem;
   --x-large: 2rem;
-
-  --font-size-bigger: 3rem;
+  --font-size-bigger: 3.2rem;
   --font-size-big: 1.4rem;
   --font-size-small: .75rem;
-
-  --first-color: var(--blue);
-  --second-color: var(--orange);
+  --first-color: #db700c;
+  --second-color: #da3969;
 }
 
 html {
@@ -46,16 +42,25 @@ body.fb {
 }
 body.in {
   height: 1080px;
+  font-size: 15px;
 }
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
+  font-family: 'Black Ops One', sans-serif;
   line-height: 100%;
-  margin: 0;
-  text-shadow: 0 2px var(--white);
+  margin: var(--large) 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-shadow: 0 1px var(--white);
+}
+.in h1 {
+  margin-top: 0;
 }
 h2 {
+  font-family: 'Black Ops One', sans-serif;
+  font-weight: 400;
+  padding: 0;
   margin: 0;
 }
 
@@ -69,6 +74,11 @@ em {
   font-weight: 500;
 }
 
+p {
+  font-size: 1.1rem;
+  margin: .5rem 0;
+}
+
 li {
   list-style-type: none;
   margin: var(--large) 0;
@@ -80,17 +90,28 @@ a {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
 }
+header > .image {
+  width: 38%;
+
+  z-index: 999;
+  position: absolute;
+  width: 31rem;
+  top: 0;
+  left: .8rem;
+}
+header > .desc {
+  width: 62%;
+  text-align: right;
+  z-index: 999;
+  width: 54%;
+}
 header img {
-  width: 40%;
-  margin-right: 5%;
-  padding: var(--large);
-  border: 1px solid var(--black);
-  border-radius: var(--medium);
+  width: 100%;
 }
 header .source {
   font-style: italic;
@@ -110,17 +131,17 @@ header .source {
   color: var(--white);
   border-top: 1px solid var(--gray);
   height: var(--footer-height);
-  text-shadow: 0 1px var(--black);
+  text-shadow: 0 1px var(--gray);
   font-size: var(--font-size-big);
 }
 .fb footer div {
   text-align: center;
   width: 33.33%;
+  text-shadow: 0 1px black;
 }
 .fb footer span {
   color: var(--red);
-  font-size: 2.3rem;
-  vertical-align: middle;
+  font-weight: 700;
 }
 .in footer {
   display: none;
@@ -139,10 +160,13 @@ header .source {
 }
 #logo img {
   height: var(--x-large);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gray);
   border-radius: 50%;
   padding: 3px;
   margin: var(--small) var(--small) var(--small) 0;
+}
+.in #logo {
+  display: none;
 }
 
 .in div.followInsta {
@@ -169,8 +193,11 @@ main {
   padding: var(--large) 0;
   border: 1px solid var(--black);
   border-radius: var(--medium);
-  background: rgba(255,255,255, 0.6);
+  background: rgba(255,255,255, 0.5);
   position: relative;
+}
+.in main {
+  margin-top: -2rem;
 }
 main::before {
   content: '';
@@ -178,14 +205,14 @@ main::before {
   width: 100%;
   height: 100%;
   top: 0;
-  background-image: url('./img/chart-bg-1.png');
+  background-image: url('/imgs/bgs/main-bg.png');
   background-repeat: no-repeat;
   background-size: 70%;
-  background-position: 93% 93%;
-  opacity: .5;
+  background-position: 105% 90%;
+  opacity: .25;
   position: absolute;
 }
-/* #legend {
+#legend {
   position: absolute;
   right: 22%;
   top: 80%;
@@ -210,24 +237,24 @@ main::before {
   background-position: 50%;
 }
 #legend .male::before {
-  background-image: url('/imgs/icons/male.png');
+  background-image: url('/imgs/male.png');
 }
 #legend .female::before {
-  background-image: url('/imgs/icons/female.png');
-} */
+  background-image: url('/imgs/female.png');
+}
 
 .wrap {
+  /*display: flex;*/
+  align-items: center;
   width: 97%;
   margin: 0 auto var(--large);
   border-right: 1px dashed var(--black);
-  text-shadow: 0 1px var(--white);
 }
 .icon {
   margin-right: var(--x-large);
   font-size: var(--font-size-big);
   color: var(--black);
   width: var(--xx-large);
-  font-weight: 500;
   text-shadow: 0 1px var(--white);
 }
 .charts {
@@ -243,29 +270,44 @@ main::before {
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
-  text-shadow: 0 1px var(--gray);
+  text-shadow: 0 0 var(--gray);
   border: 1px solid var(--black);
-  background-color: var(--blue);
+}
+.in .chart {
+  height: 1.5rem;
+  line-height: 1.5rem;
 }
 .chart:before {
   content: '';
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-repeat: no-repeat;
   background-size: 150%;
   display: inline-block;
-  background-color: var(--white);
   position: absolute;
   left: calc( -1 * (var(--x-large) / 2) );
   border-radius: 50%;
   padding: 0px;
-  border: 1px solid #333;
-  top: -1px;
   background-position: 50%;
   border: 4px solid var(--white);
-  top: -.5rem;
+  top: -8px;
 }
-
+.in .chart:before {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.first {
+  background-color: var(--blue);
+}
+/*.first:before {
+  background-image: url('/imgs/male.png');
+}*/
+.second {
+  background-color: var(--second-color);
+}
+.second:before {
+  background-image: url('/imgs/female.png');
+}
 .chart.green {
   background-color: var(--green);
   color: var(--white);
@@ -296,34 +338,100 @@ main::before {
 }
 
 
-/* DATA */
 .russia .chart {
   width: 100%;
 }
 .russia .chart:before {
-  background-image: url('/imgs/flags/RUS.svg');
+  background-image: url('./imgs/flags/RUS.svg');
 }
-.usa .chart {
+
+.usa .first {
   width: 95.7%;
 }
 .usa .chart:before {
-  background-image: url('/imgs/flags/USA.svg');
+  background-image: url('./imgs/flags/USA.svg');
 }
-.china .chart {
+.china .first {
   width: 94.9%;
 }
 .china .chart:before {
-  background-image: url('/imgs/flags/CHN.svg');
+  background-image: url('./imgs/flags/CHN.svg');
 }
-.israel .chart {
+.israel .first {
   width: 92.5%;
 }
 .israel .chart:before {
-  background-image: url('/imgs/flags/ISR.svg');
+  background-image: url('./imgs/flags/ISR.svg');
 }
-.south-korea .chart {
+.south-korea .first {
   width: 81.1%;
 }
 .south-korea .chart:before {
-  background-image: url('/imgs/flags/KOR.svg');
+  background-image: url('./imgs/flags/KOR.svg');
+}
+.ukraine .first {
+  width: 73.6%;
+}
+.ukraine .chart:before {
+  background-image: url('./imgs/flags/UKR.svg');
+}
+.iran .first {
+  width: 72.8%;
+}
+.iran .chart:before {
+  background-image: url('./imgs/flags/IRN.svg');
+}
+.united-kingdom .first {
+  width: 70.4%;
+}
+.united-kingdom .chart:before {
+  background-image: url('./imgs/flags/GBR.svg');
+}
+.germany .first {
+  width: 63.0%;
+}
+.germany .chart:before {
+  background-image: url('./imgs/flags/DEU.svg');
+}
+.turkey .first {
+  width: 53.4%;
+}
+.turkey .chart:before {
+  background-image: url('./imgs/flags/TUR.svg');
+}
+.saudi-arabia .first {
+  width: 43.4%;
+}
+.saudi-arabia .chart:before {
+  background-image: url('./imgs/flags/SAU.svg');
+}
+.belarus .first {
+  width: 41.1%;
+}
+.belarus .chart:before {
+  background-image: url('./imgs/flags/BLR.svg');
+}
+.france .first {
+  width: 39.3%;
+}
+.france .chart:before {
+  background-image: url('./imgs/flags/FRA.svg');
+}
+.india .first {
+  width: 32.5%;
+}
+.india .chart:before {
+  background-image: url('./imgs/flags/IND.svg');
+}
+.japan .first {
+  width: 27.7%;
+}
+.japan .chart:before {
+  background-image: url('./imgs/flags/JPN.svg');
+}
+.egypt .first {
+  width: 21.5%;
+}
+.egypt .chart:before {
+  background-image: url('./imgs/flags/EGY.svg');
 }
