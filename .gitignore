@@ -38,4 +38,4 @@ coverage
 .env
 
 # Custom
-package-lock.json*
+package-lock.json
