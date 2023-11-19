@@ -104,8 +104,10 @@ const buildRows = (rows) => {
     const $tr = document.createElement('tr')
     // APIRELATED
     $tr.innerHTML = `
+      <td><img src="/assets/images/posts/in-post-${row.id}.png"/></td>
       <td>${row.id}</td>
       <td>${row.name}</td>
+      <td>${new Date(row.published).toLocaleDateString()}</td>
     `
     // APIRELATED
     $tBody.appendChild($tr)

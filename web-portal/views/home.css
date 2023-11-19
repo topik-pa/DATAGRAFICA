@@ -1,1 +1,13 @@
 @import "/components/shared/dTable/dTable.css";
+
+#dtable img {
+  height: 5rem;
+}
+#dtable img:hover {
+  height: inherit;
+  position: absolute;
+  z-index: 999;
+}
+#dtable td {
+  vertical-align: middle;
+}
