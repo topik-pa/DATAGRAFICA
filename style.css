@@ -16,6 +16,7 @@
   --medium: .7rem;
   --large: 1rem;
   --x-large: 2rem;
+  --xx-large: 7rem;
 
   --font-size-bigger: 3rem;
   --font-size-big: 1.4rem;
@@ -33,9 +34,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  color: var(--black);
+  color: var(--white);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg4.png');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -53,10 +54,16 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 2px var(--white);
+  text-shadow: 0 2px var(--black);
 }
 h2 {
   margin: 0;
+}
+h3 {
+  margin: 0;
+  margin: var(--medium) 0 var(--medium) 0;
+  text-align: center;
+  color: var(--black);
 }
 
 small {
@@ -169,8 +176,9 @@ main {
   padding: var(--large) 0;
   border: 1px solid var(--black);
   border-radius: var(--medium);
-  background: rgba(255,255,255, 0.6);
+  background: rgba(255,255,255, 0.7);
   position: relative;
+  margin-top: 0;
 }
 main::before {
   content: '';
@@ -178,11 +186,11 @@ main::before {
   width: 100%;
   height: 100%;
   top: 0;
-  background-image: url('./img/chart-bg-1.png');
+  background-image: url('./imgs/bgs/main-bg-3.png');
   background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: 93% 93%;
-  opacity: .5;
+  background-size: 60%;
+  background-position: 100% 20%;
+  opacity: .9;
   position: absolute;
 }
 /* #legend {
@@ -218,17 +226,21 @@ main::before {
 
 .wrap {
   width: 97%;
-  margin: 0 auto var(--large);
+  margin: 0 auto var(--medium);
   border-right: 1px dashed var(--black);
   text-shadow: 0 1px var(--white);
+
+  display: flex;
+  align-items: center;
 }
 .icon {
   margin-right: var(--x-large);
-  font-size: var(--font-size-big);
+  /* font-size: var(--font-size-big); */
   color: var(--black);
   width: var(--xx-large);
   font-weight: 500;
   text-shadow: 0 1px var(--white);
+  white-space: nowrap;
 }
 .charts {
   width: 100%;
@@ -237,9 +249,9 @@ main::before {
 .chart {
   position: relative;
   margin: 2px 0;
-  height: 2rem;
-  font-size: var(--font-size-big);
-  line-height: 2rem;
+  height: 1rem;
+  /* font-size: var(--font-size-big); */
+  line-height: 1rem;
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
@@ -249,8 +261,8 @@ main::before {
 }
 .chart:before {
   content: '';
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background-repeat: no-repeat;
   background-size: 150%;
   display: inline-block;
@@ -262,8 +274,8 @@ main::before {
   border: 1px solid #333;
   top: -1px;
   background-position: 50%;
-  border: 4px solid var(--white);
-  top: -.5rem;
+  border: 2px solid var(--white);
+  top: -4px;
 }
 
 .chart.green {
@@ -295,35 +307,122 @@ main::before {
   left: 12%;
 }
 
+iframe {
+  margin: 0 1rem;
+  background: var(--white);;
+  width: 97%!important;
+}
+
+.logo {
+  width: 5rem;
+  /* margin-right: 5%; */
+  /* padding: var(--large); */
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
 
 /* DATA */
-.russia .chart {
-  width: 100%;
+.lettonia .chart {
+  width: 85.6%;
 }
-.russia .chart:before {
-  background-image: url('/imgs/flags/RUS.svg');
+.lettonia .chart:before {
+  background-image: url('/imgs/flags/LVA.svg');
 }
-.usa .chart {
-  width: 95.7%;
+.lituania .chart {
+  width: 34.8%;
 }
-.usa .chart:before {
-  background-image: url('/imgs/flags/USA.svg');
+.lituania .chart:before {
+  background-image: url('/imgs/flags/LTU.svg');
 }
-.china .chart {
-  width: 94.9%;
+.croazia .chart {
+  width: 26.8%;
 }
-.china .chart:before {
-  background-image: url('/imgs/flags/CHN.svg');
+.croazia .chart:before {
+  background-image: url('/imgs/flags/HRV.svg');
 }
-.israel .chart {
-  width: 92.5%;
+.austria .chart {
+  width: 24%;
 }
-.israel .chart:before {
-  background-image: url('/imgs/flags/ISR.svg');
+.austria .chart:before {
+  background-image: url('/imgs/flags/AUT.svg');
 }
-.south-korea .chart {
-  width: 81.1%;
+.slovenia .chart {
+  width: 22.8%;
 }
-.south-korea .chart:before {
-  background-image: url('/imgs/flags/KOR.svg');
+.slovenia .chart:before {
+  background-image: url('/imgs/flags/SVN.svg');
+}
+
+.ungheria .chart {
+  width: 22.8%;
+}
+.ungheria .chart:before {
+  background-image: url('/imgs/flags/HUN.svg');
+}
+
+.germania .chart {
+  width: 21.2%;
+}
+.germania .chart:before {
+  background-image: url('/imgs/flags/DEU.svg');
+}
+
+.paesibassi .chart {
+  width: 18%;
+}
+.paesibassi .chart:before {
+  background-image: url('/imgs/flags/OLA.png');
+}
+
+.francia .chart {
+  width: 17.2%;
+}
+.francia .chart:before {
+  background-image: url('/imgs/flags/FRA.svg');
+}
+
+.repubblicaceca .chart {
+  width: 16.8%;
+}
+.repubblicaceca .chart:before {
+  background-image: url('/imgs/flags/RCE.png');
+}
+
+.malta .chart {
+  width: 16%;
+}
+.malta .chart:before {
+  background-image: url('/imgs/flags/MAL.png');
+}
+
+.italia .chart {
+  width: 12.8%;
+}
+.italia .chart:before {
+  background-image: url('/imgs/flags/ITA.svg');
+}
+
+.spagna .chart {
+  width: 12.8%;
+}
+.spagna .chart:before {
+  background-image: url('/imgs/flags/ESP.svg');
+}
+
+.svezia .chart {
+  width: 10%;
+}
+.svezia .chart:before {
+  background-image: url('/imgs/flags/SWE.svg');
+}
+
+.grecia .chart {
+  width: 6.4%;
+}
+.grecia .chart:before {
+  background-image: url('/imgs/flags/GRC.svg');
 }
