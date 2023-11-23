@@ -3,7 +3,34 @@
     {
       "id": "20231119A",
       "name": "ArmiesStrength",
-      "published": 1700400211084
+      "created": 1700400211084,
+      "posted": [
+        {
+          "social": "Facebook",
+          "time": 1700400211084,
+          "status": "active",
+          "impression": [8273],
+          "coverage": [6772],
+          "interactions": [2381]
+        },
+        {
+          "social": "Instagram",
+          "time": 1700400211084,
+          "status": "active",
+          "impression": [6729],
+          "coverage": [6568],
+          "interactions": [69]
+        }
+      ],
+      "boost": [
+        {
+          "social": "Facebook",
+          "price": 10,
+          "target": "target 7",
+          "started": 1700400211084,
+          "ended": null
+        }
+      ]
     }
   ],
   "total": 1

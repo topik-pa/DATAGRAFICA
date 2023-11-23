@@ -107,7 +107,7 @@ const buildRows = (rows) => {
       <td><img src="/assets/images/posts/in-post-${row.id}.png" alt="${row.name} post preview"/></td>
       <td><a href="/post/${row.id}" title="Go to post: ${row.id}">${row.id}</a></td>
       <td>${row.name}</td>
-      <td>${new Date(row.published).toLocaleDateString()}</td>
+      <td>${new Date(row.created).toLocaleDateString()}</td>
     `
     // APIRELATED
     $tBody.appendChild($tr)
