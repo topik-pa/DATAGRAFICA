@@ -36,11 +36,12 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg3.png');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
   position: relative;
+  color: var(--white);
 }
 body.fb {
   height: 1920px;
@@ -54,10 +55,21 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 2px var(--white);
+  color: var(--white);
+  text-shadow: 0 2px var(--black);
+  text-align: center;
 }
 h2 {
   margin: 0;
+  color: var(--white);
+  text-shadow: 0 2px var(--black);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: var(--font-size-big);
+  margin-top: 8rem;
 }
 
 small {
@@ -93,6 +105,7 @@ header img {
   border-radius: var(--medium);
   margin-bottom: var(--xx-large);
   display: block;
+  background-color: rgba(255,255,255,0.2);
 }
 header .source {
   font-style: italic;
