@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * @file dTable - A Dynamic Pure JS Table
  * @description dTable provides data sorting, filtering and pagination
@@ -93,6 +94,20 @@ for (const $filter of $filters) {
   })
 }
 
+const getBoostData = (data) => {
+  let str = ''
+  data.forEach(el => {
+    str += '<div>'
+    str += `${el.price}€ (${el.social})`
+    str += '<br>'
+    str += `Start: ${new Date(el.started).toLocaleDateString()}`
+    str += '<br>'
+    str += `End: ${new Date((el.started + (1000 * 60 * 60 * 24 * el.days))).toLocaleDateString()}`
+    str += '</div>'
+  })
+  return str
+}
+
 /**
  * buildRows
  * @description Build a table row for every result found on remote data
@@ -104,10 +119,22 @@ const buildRows = (rows) => {
     const $tr = document.createElement('tr')
     // APIRELATED
     $tr.innerHTML = `
-      <td><img src="/assets/images/posts/in-post-${row.id}.png" alt="${row.name} post preview"/></td>
+      <td><img class="preview" src="/assets/images/posts/post-${row.id}.png" alt="${row.name} post preview"/></td>
       <td><a href="/post/${row.id}" title="Go to post: ${row.id}">${row.id}</a></td>
       <td>${row.name}</td>
       <td>${new Date(row.created).toLocaleDateString()}</td>
+      <td>
+        <img class="icon" src="/assets/images/status_${row.posted[0].status}.jpg" alt="${row.posted[0].status ? 'Post active' : 'Post disabled'}" title="${row.posted[0].status ? 'Post active' : 'Post disabled'}"/>
+       |
+       <img class="icon" src="/assets/images/status_${row.posted[0].story}.jpg" alt="${row.posted[0].story ? 'Story active' : 'Story disabled'}" title="${row.posted[0].story ? 'Story active' : 'Story disabled'}"/>
+      </td>
+      <td>
+        <img class="icon" src="/assets/images/status_${row.posted[1].status}.jpg" alt="${row.posted[1].status ? 'Post active' : 'Post disabled'}" title="${row.posted[1].status ? 'Post active' : 'Post disabled'}"/>
+      </td>
+
+      <td>
+        ${getBoostData(row.boost)}
+      </td>
     `
     // APIRELATED
     $tBody.appendChild($tr)

@@ -1,9 +1,9 @@
 @import "/components/shared/dTable/dTable.css";
 
-#dtable img {
+#dtable img.preview {
   height: 5rem;
 }
-#dtable img:hover {
+#dtable img.preview:hover {
   height: inherit;
   position: absolute;
   z-index: var(--modal);
