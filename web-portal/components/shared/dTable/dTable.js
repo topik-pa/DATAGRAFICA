@@ -97,12 +97,17 @@ for (const $filter of $filters) {
 const getBoostData = (data) => {
   let str = ''
   data.forEach(el => {
-    str += '<div>'
+    const startDate = new Date(el.started)
+    const endDate = new Date((el.started + (1000 * 60 * 60 * 24 * el.days)))
+    const today = Date.now()
+    str += `<div><div class="${today < endDate ? 'green' : 'red'}">&#9673;</div>`
     str += `${el.price}€ (${el.social})`
     str += '<br>'
-    str += `Start: ${new Date(el.started).toLocaleDateString()}`
+    str += `Start: ${startDate.toLocaleDateString()}`
     str += '<br>'
-    str += `End: ${new Date((el.started + (1000 * 60 * 60 * 24 * el.days))).toLocaleDateString()}`
+    str += `End: ${endDate.toLocaleDateString()}`
+    str += '<br>'
+    str += `Cpi: ${el.cpi || 'ND'}`
     str += '</div>'
   })
   return str
