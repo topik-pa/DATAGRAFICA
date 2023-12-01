@@ -97,8 +97,8 @@ for (const $filter of $filters) {
 const getBoostData = (data) => {
   let str = ''
   data.forEach(boost => {
-    const startDate = boost.started ? new Date(boost.started).toLocaleDateString() : null
-    const endDate = boost.started ? new Date((boost.started + (1000 * 60 * 60 * 24 * boost.days))).toLocaleDateString() : null
+    const startDate = boost.started || null
+    const endDate = startDate ? boost.started + (1000 * 60 * 60 * 24 * boost.days) : null
     const today = Date.now()
     const engagement = (boost.reactions && boost.followers) ? ((boost.reactions / boost.followers) * 100).toFixed(2) : null
     str += `<div><div class="${today < endDate ? 'green' : 'red'}">&#9673;</div>`
@@ -106,9 +106,9 @@ const getBoostData = (data) => {
     str += '<br>'
     str += `Target: ${boost.target}`
     str += '<br>'
-    str += `Start: ${startDate}`
+    str += `Start: ${new Date(startDate).toLocaleDateString()}`
     str += '<br>'
-    str += `End: ${endDate}`
+    str += `End: ${new Date(endDate).toLocaleDateString()}`
     str += '<br>'
     str += `Cpi: ${boost.cpi || 'ND'}`
     str += '<br>'
