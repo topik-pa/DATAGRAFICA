@@ -17,7 +17,7 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3rem;
+  --font-size-bigger: 3.2rem;
   --font-size-big: 1.4rem;
   --font-size-small: .75rem;
 
@@ -35,7 +35,7 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/river.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -140,8 +140,8 @@ header .source {
   width: 100%;
   bottom: var(--footer-height);
   margin-bottom: var(--small);
-  color: var(--white);
-  text-shadow: 0 1px var(--gray);
+  color: var(--black);
+  text-shadow: 0 1px var(--white);
 }
 #logo img {
   height: var(--x-large);
@@ -179,7 +179,7 @@ main {
   padding: var(--large) 0;
   border: 1px solid var(--black);
   border-radius: var(--medium);
-  background: rgba(255,255,255, 0.6);
+  background: rgba(255,255,255, 0.7);
   position: relative;
 }
 main::before {
