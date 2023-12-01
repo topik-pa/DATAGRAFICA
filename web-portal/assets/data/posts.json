@@ -24,7 +24,9 @@
           "target": "Post-20231123A-OmicidiDiDonneEU",
           "started": 1700754124999,
           "days": 7,
-          "cpi": 0.01
+          "cpi": 0.01,
+          "followers": 118,
+          "reactions": 189
         }
       ]
     }
