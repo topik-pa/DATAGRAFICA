@@ -27,6 +27,16 @@
           "cpi": 0.01,
           "followers": 118,
           "reactions": 189
+        },
+        {
+          "social": "Facebook",
+          "price": 5,
+          "target": "Post-20231123A-OmicidiDiDonneEU-DONNE",
+          "started": null,
+          "days": 4,
+          "cpi": null,
+          "followers": null,
+          "reactions": null
         }
       ]
     }
