@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3rem;
-  --font-size-big: 1.4rem;
+  --font-size-bigger: 3.8rem;
+  --font-size-big: 1.6rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -33,9 +33,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  color: var(--black);
+  color: var(--white);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg3.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -50,13 +50,18 @@ body.in {
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
+  font-family: "Fira Sans", sans-serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 3px var(--white);
+  text-shadow: 0 3px var(--black);
 }
 h2 {
   margin: 0;
+}
+
+.desc {
+  font-size: var(--font-size-big);
+  margin: var(--small) 0;
 }
 
 small {
@@ -89,7 +94,7 @@ header {
   padding: 0 var(--large);
 }
 header img {
-  width: 40%;
+  width: 33%;
   margin-right: 5%;
   padding: var(--large);
   border: 1px solid var(--black);
@@ -176,11 +181,11 @@ header .source {
 
 /*MAIN*/
 main {
-  margin: var(--large);
+  margin: 0 var(--large);
   padding: var(--large) 0;
   border: 1px solid var(--black);
   border-radius: var(--medium);
-  background: rgba(255,255,255, 0.6);
+  background: rgba(255,255,255, 1);
   position: relative;
 }
 main::before {
@@ -248,22 +253,23 @@ main::before {
 .chart {
   position: relative;
   margin: 2px 0;
-  height: 2rem;
+  height: 1.7rem;
   font-size: var(--font-size-big);
-  line-height: 2rem;
+  line-height: 1.7rem;
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
-  text-shadow: 0 2px var(--gray);
+  text-shadow: 0 2px var(--black);
   border: 1px solid var(--black);
   background-color: var(--blue);
+  font-weight: 550;
 }
 .chart:before {
   content: '';
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.8rem;
+  height: 2.8rem;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: 100%;
   display: inline-block;
   background-color: var(--white);
   position: absolute;
@@ -284,7 +290,7 @@ main::before {
 .chart.red {
   background-color: var(--red);
 }
-.chart.orange {
+.chart.top {
   background-color: var(--orange);
 }
 
@@ -308,33 +314,63 @@ main::before {
 
 
 /* DATA */
-.russia .chart {
+.entry1 .chart {
   width: 100%;
 }
-.russia .chart:before {
-  background-image: url('/imgs/flags/RUS.svg');
+.entry1 .chart:before {
+  background-image: url('/imgs/icons/javascript.png');
 }
-.usa .chart {
-  width: 95.7%;
+.entry2 .chart {
+  width: 83.27%;
 }
-.usa .chart:before {
-  background-image: url('/imgs/flags/USA.svg');
+.entry2 .chart:before {
+  background-image: url('/imgs/icons/htmlcss.jpg');
 }
-.china .chart {
-  width: 94.9%;
+.entry3 .chart {
+  width: 77.47%;
 }
-.china .chart:before {
-  background-image: url('/imgs/flags/CHN.svg');
+.entry3 .chart:before {
+  background-image: url('/imgs/icons/python.jpeg');
 }
-.israel .chart {
-  width: 92.5%;
+.entry4 .chart {
+  width: 76.49%;
 }
-.israel .chart:before {
-  background-image: url('/imgs/flags/ISR.svg');
+.entry4 .chart:before {
+  background-image: url('/imgs/icons/sql.png');
 }
-.south-korea .chart {
-  width: 81.1%;
+.entry5 .chart {
+  width: 61.10%;
 }
-.south-korea .chart:before {
-  background-image: url('/imgs/flags/KOR.svg');
+.entry5 .chart:before {
+  background-image: url('/imgs/icons/typescript.png');
+}
+.entry6 .chart {
+  width: 50.88%;
+}
+.entry6 .chart:before {
+  background-image: url('/imgs/icons/bash.png');
+}
+.entry7 .chart {
+  width: 48.02%;
+}
+.entry7 .chart:before {
+  background-image: url('/imgs/icons/java.png');
+}
+.entry8 .chart {
+  width: 43.42%;
+}
+.entry8 .chart:before {
+  background-image: url('/imgs/icons/csharp.png');
+}
+.entry9 .chart {
+  width: 35.24%;
+}
+.entry9 .chart:before {
+  background-image: url('/imgs/icons/c++.png');
+}
+.entry10 .chart {
+  width: 30.40%;
+}
+.entry10 .chart:before {
+  background-image: url('/imgs/icons/c.png');
 }
