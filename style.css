@@ -15,7 +15,7 @@
   --small: .3rem;
   --medium: .7rem;
   --large: 1rem;
-  --x-large: 2rem;
+  --x-large: 1.25rem;
 
   --font-size-bigger: 3.8rem;
   --font-size-big: 1.6rem;
@@ -33,9 +33,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  color: var(--white);
+  color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg3.jpg');
+  background-image: url('/imgs/bgs/bg1.jpeg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -53,15 +53,21 @@ h1 {
   font-family: "Fira Sans", sans-serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 3px var(--black);
+  text-shadow: 0 3px var(--white);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 h2 {
   margin: 0;
+  text-shadow: 0 1px var(--white);
 }
 
 .desc {
   font-size: var(--font-size-big);
   margin: var(--small) 0;
+  text-shadow: 0 1px var(--white);
+  font-weight: 500;
+  text-align: center;
 }
 
 small {
@@ -94,14 +100,12 @@ header {
   padding: 0 var(--large);
 }
 header img {
-  width: 33%;
-  margin-right: 5%;
-  padding: var(--large);
-  border: 1px solid var(--black);
-  border-radius: var(--medium);
+  width: 80%;
+    margin-right: 2rem;
 }
 header .source {
   font-style: italic;
+  text-shadow: 0 1px var(--white);
 }
 
 .fb footer {
@@ -142,15 +146,15 @@ header .source {
   width: 100%;
   bottom: var(--footer-height);
   margin-bottom: var(--small);
-  color: var(--white);
-  text-shadow: 0 1px var(--gray);
+  color: var(--black);
+  text-shadow: 0 1px var(--white);
 }
 .in #logo {
   display: none;
 }
 #logo img {
   height: var(--x-large);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   border-radius: 50%;
   padding: 3px;
   margin: var(--small) var(--small) var(--small) 0;
@@ -234,7 +238,7 @@ main::before {
 
 .wrap {
   width: 97%;
-  margin: 0 auto var(--large);
+  margin: 0 auto var(--x-large);
   border-right: 1px dashed var(--black);
   text-shadow: 0 1px var(--white);
 }
@@ -318,59 +322,135 @@ main::before {
   width: 100%;
 }
 .entry1 .chart:before {
-  background-image: url('/imgs/icons/javascript.png');
+  background-image: url('/imgs/icons/node.png');
 }
 .entry2 .chart {
-  width: 83.27%;
+  width: 95.14%;
 }
 .entry2 .chart:before {
-  background-image: url('/imgs/icons/htmlcss.jpg');
+  background-image: url('/imgs/icons/react.png');
 }
 .entry3 .chart {
-  width: 77.47%;
+  width: 51.53%;
 }
 .entry3 .chart:before {
-  background-image: url('/imgs/icons/python.jpeg');
+  background-image: url('/imgs/icons/jquery.png');
 }
 .entry4 .chart {
-  width: 76.49%;
+  width: 45.20%;
 }
 .entry4 .chart:before {
-  background-image: url('/imgs/icons/sql.png');
+  background-image: url('/imgs/icons/express.png');
 }
 .entry5 .chart {
-  width: 61.10%;
+  width: 40.93%;
 }
 .entry5 .chart:before {
-  background-image: url('/imgs/icons/typescript.png');
+  background-image: url('/imgs/icons/angular.png');
 }
 .entry6 .chart {
-  width: 50.88%;
+  width: 39.08%;
 }
 .entry6 .chart:before {
-  background-image: url('/imgs/icons/bash.png');
+  background-image: url('/imgs/icons/next.jpeg');
 }
 .entry7 .chart {
-  width: 48.02%;
+  width: 38.85%;
 }
 .entry7 .chart:before {
-  background-image: url('/imgs/icons/java.png');
+  background-image: url('/imgs/icons/asp-net-core.png');
 }
 .entry8 .chart {
-  width: 43.42%;
+  width: 38.40%;
 }
 .entry8 .chart:before {
-  background-image: url('/imgs/icons/csharp.png');
+  background-image: url('/imgs/icons/vue.png');
 }
 .entry9 .chart {
-  width: 35.24%;
+  width: 31.37%;
 }
 .entry9 .chart:before {
-  background-image: url('/imgs/icons/c++.png');
+  background-image: url('/imgs/icons/wp.png');
 }
 .entry10 .chart {
-  width: 30.40%;
+  width: 29.98%;
 }
 .entry10 .chart:before {
-  background-image: url('/imgs/icons/c.png');
+  background-image: url('/imgs/icons/asp-net.jpeg');
+}
+
+
+.entry11 .chart {
+  width: 28.51%;
+}
+.entry11 .chart:before {
+  content: none;
+}
+.entry12 .chart {
+  width: 28.01%;
+}
+.entry12 .chart:before {
+  content: none;
+}
+.entry13 .chart {
+  width: 26.89%;
+}
+.entry13 .chart:before {
+  content: none;
+}
+.entry14 .chart {
+  width: 17.77%;
+}
+.entry14 .chart:before {
+  content: none;
+}
+.entry15 .chart {
+  width: 17.39%;
+}
+.entry15 .chart:before {
+  content: none;
+}
+.entry16 .chart {
+  width: 16.90%;
+}
+.entry16 .chart:before {
+  content: none;
+}
+.entry17 .chart {
+  width: 15.52%;
+}
+.entry17 .chart:before {
+  content: none;
+}
+.entry18 .chart {
+  width: 12.87%;
+}
+.entry18 .chart:before {
+  content: none;
+}
+.entry19 .chart {
+  width: 12.02%;
+}
+.entry19 .chart:before {
+  content: none;
+}
+.entry20 .chart {
+  width: 11.44%;
+}
+.entry20 .chart:before {
+  content: none;
+}
+
+
+
+.gotosite {
+  padding: var(--large);
+  margin: var(--large);
+  width: 16rem;
+  border: 5px solid var(--red);
+  font-size: var(--font-size-big);
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  right: 5%;
 }
