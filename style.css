@@ -53,7 +53,7 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 2px var(--white);
+  text-shadow: 0 3px var(--white);
 }
 h2 {
   margin: 0;
@@ -84,6 +84,9 @@ header {
   align-items: center;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
+}
+.in header {
+  padding: 0 var(--large);
 }
 header img {
   width: 40%;
@@ -137,6 +140,9 @@ header .source {
   color: var(--white);
   text-shadow: 0 1px var(--gray);
 }
+.in #logo {
+  display: none;
+}
 #logo img {
   height: var(--x-large);
   border: 1px solid var(--white);
@@ -150,11 +156,16 @@ header .source {
   justify-content: flex-end;
   font-weight: 500;
   margin-right: var(--large);
+  font-size: var(--font-size-big);
+  text-shadow: 0 1px var(--white);
 }
 .in div.followInsta span {
   color: var(--red);
   transform: rotate(39deg);
   font-size: var(--font-size-big);
+  vertical-align: text-bottom;
+  font-weight: bold;
+  text-shadow: 0 2px var(--white);
 }
 .fb div.followInsta {
   display: none;
@@ -228,7 +239,7 @@ main::before {
   color: var(--black);
   width: var(--xx-large);
   font-weight: 500;
-  text-shadow: 0 1px var(--white);
+  text-shadow: 0 2px var(--white);
 }
 .charts {
   width: 100%;
@@ -243,7 +254,7 @@ main::before {
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
-  text-shadow: 0 1px var(--gray);
+  text-shadow: 0 2px var(--gray);
   border: 1px solid var(--black);
   background-color: var(--blue);
 }
