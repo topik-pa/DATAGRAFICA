@@ -3,30 +3,36 @@
 :root {
   --black: #222222;
   --gray: #777777;
-  --white: #EEEEEE;
+  --white: #FFFFFF;
   --blue: #5180df;
-  --red: #dd2e2e;
-  --orange: #db700c;
+  --red: #f00606;;
+  --orange: #FF7300;
   --green: #3b6936;
 
   --footer: #255877;
   --footer-height: 2.4rem;
 
-  --small: .3rem;
-  --medium: .7rem;
-  --large: 1rem;
-  --x-large: 2rem;
+  --x-small: .3rem;
+  --small: .7rem;
+  --medium: 1rem;
+  --large: 1.8rem;
+  --x-large: 2.5rem;
 
   --font-size-bigger: 3.8rem;
   --font-size-big: 1.6rem;
+  --font-size-normal: 1rem;
   --font-size-small: .75rem;
 
-  --first-color: var(--blue);
+  --first-color: var(--orange);
   --second-color: var(--orange);
+  --third-color: var(--green);
+
+  --border-radius-small: var(--x-small);
+  --border-radius: var(--font-size-big);
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
 }
 
@@ -35,43 +41,74 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/CV-page-1.png');
   background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: cover;
+  background-position: 543% 50%;
+  background-size: contain;
   position: relative;
 }
 body.fb {
+  width: 1080px;
   height: 1350px;
 }
 body.in {
+  width: 1080px;
   height: 1080px;
+}
+
+main {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+main::before {
+  content: ' ';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
-  line-height: 100%;
+  text-transform: uppercase;
+  line-height: 140%;
   margin: 0;
-  text-shadow: 0 3px var(--white);
+  color: var(--white);
+  position: relative;
+  padding: 0 calc(var(--x-large)* 2);
+  padding-top: calc( var(--x-large) * 3 );
+  font-weight: bold;
+  letter-spacing: 5px;
 }
-h2 {
-  margin: 0;
+h1 em {
+  display: block;
+  color: var(--first-color);
+  text-shadow: 1px 1px 1px var(--white);
+  font-style: normal;
+}
+p {
+  position: relative;
+  color: var(--white);
+  padding: 0 calc(var(--x-large)* 2);
+  padding-top: calc( var(--x-large) * 2 );
+  font-size: var(--font-size-big);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 550;
+}
+p em {
+  color: var(--first-color);
 }
 
-.desc {
-  font-size: var(--font-size-big);
-  margin: var(--small) 0;
-}
 
 small {
-  display: block;
   font-size: var(--font-size-small);
   font-weight: normal;
-}
-
-em {
-  font-weight: 500;
 }
 
 li {
@@ -83,121 +120,18 @@ a {
   color: inherit;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--large);
-  text-shadow: 0 1px var(--gray);
-}
-.in header {
-  padding: 0 var(--large);
-}
-header img {
-  width: 40%;
-  margin-right: 5%;
-  padding: var(--large);
-  border: 1px solid var(--black);
-  border-radius: var(--medium);
-}
-header .source {
-  font-style: italic;
-}
-
-.fb footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 var(--large);
-  left: 0;
-  right: 0;
-  font-weight: 500;
-  background-color: var(--footer);
-  color: var(--white);
-  border-top: 1px solid var(--gray);
-  height: var(--footer-height);
-  text-shadow: 0 1px var(--black);
-  font-size: var(--font-size-big);
-}
-.fb footer div {
-  text-align: center;
-  width: 33.33%;
-}
-.fb footer span {
-  color: var(--red);
-  font-size: 2.3rem;
-  vertical-align: middle;
-}
-.in footer {
-  display: none;
-}
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--font-size-big);
-  position: absolute;
-  width: 100%;
-  bottom: var(--footer-height);
-  margin-bottom: var(--small);
-  color: var(--white);
-  text-shadow: 0 1px var(--gray);
-}
-.in #logo {
-  display: none;
-}
-#logo img {
-  height: var(--x-large);
-  border: 1px solid var(--white);
-  border-radius: 50%;
-  padding: 3px;
-  margin: var(--small) var(--small) var(--small) 0;
-}
-
-.in div.followInsta {
-  display: flex;
-  justify-content: flex-end;
-  font-weight: 500;
-  margin-right: var(--large);
-  font-size: var(--font-size-big);
-  text-shadow: 0 1px var(--white);
-}
-.in div.followInsta span {
-  color: var(--red);
-  transform: rotate(39deg);
-  font-size: var(--font-size-big);
-  vertical-align: text-bottom;
-  font-weight: bold;
-  text-shadow: 0 2px var(--white);
-}
-.fb div.followInsta {
-  display: none;
-}
 
 
-
-
-/*MAIN*/
-main {
-  margin: var(--large);
-  padding: var(--large) 0;
-  border: 1px solid var(--black);
-  border-radius: var(--medium);
-  background: rgba(255,255,255, 0.6);
+.dot {
+  display: inline-block;
+  width: var(--large);
+  height: var(--large);
+  background-color: var(--white);
   position: relative;
+  margin-left: calc(var(--x-large)* 2);
+  margin-top: calc(var(--x-large)* 3);
+  border-radius: var(--border-radius-small);
 }
-main::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-image: url('./img/chart-bg-1.png');
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: 93% 93%;
-  opacity: .5;
-  position: absolute;
+.dot:nth-child(2) {
+  background-color: var(--first-color);
 }
