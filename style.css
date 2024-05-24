@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3.8rem;
-  --font-size-big: 1.6rem;
+  --font-size-bigger: 3rem;
+  --font-size-big: 1.4rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -53,7 +53,7 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 3px var(--white);
+  text-shadow: 0 2px var(--white);
 }
 h2 {
   margin: 0;
@@ -127,7 +127,6 @@ header .source {
 }
 .fb footer span {
   color: var(--red);
-  font-size: 2.3rem;
   vertical-align: middle;
 }
 .in footer {
@@ -161,8 +160,6 @@ header .source {
   justify-content: flex-end;
   font-weight: 500;
   margin-right: var(--large);
-  font-size: var(--font-size-big);
-  text-shadow: 0 1px var(--white);
 }
 .in div.followInsta span {
   color: var(--red);
@@ -244,7 +241,7 @@ main::before {
   color: var(--black);
   width: var(--xx-large);
   font-weight: 500;
-  text-shadow: 0 2px var(--white);
+  text-shadow: 0 1px var(--white);
 }
 .charts {
   width: 100%;
@@ -259,10 +256,9 @@ main::before {
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
-  text-shadow: 0 2px var(--black);
+  text-shadow: 0 1px var(--gray);
   border: 1px solid var(--black);
   background-color: var(--blue);
-  font-weight: 550;
 }
 .chart:before {
   content: '';
@@ -290,7 +286,7 @@ main::before {
 .chart.red {
   background-color: var(--red);
 }
-.chart.top {
+.chart.orange {
   background-color: var(--orange);
 }
 
