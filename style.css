@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3.8rem;
-  --font-size-big: 1.6rem;
+  --font-size-bigger: 3rem;
+  --font-size-big: 1.4rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -53,15 +53,10 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 3px var(--white);
+  text-shadow: 0 2px var(--white);
 }
 h2 {
   margin: 0;
-}
-
-.desc {
-  font-size: var(--font-size-big);
-  margin: var(--small) 0;
 }
 
 small {
@@ -89,9 +84,6 @@ header {
   align-items: center;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
-}
-.in header {
-  padding: 0 var(--large);
 }
 header img {
   width: 40%;
@@ -145,9 +137,6 @@ header .source {
   color: var(--white);
   text-shadow: 0 1px var(--gray);
 }
-.in #logo {
-  display: none;
-}
 #logo img {
   height: var(--x-large);
   border: 1px solid var(--white);
@@ -161,16 +150,11 @@ header .source {
   justify-content: flex-end;
   font-weight: 500;
   margin-right: var(--large);
-  font-size: var(--font-size-big);
-  text-shadow: 0 1px var(--white);
 }
 .in div.followInsta span {
   color: var(--red);
   transform: rotate(39deg);
   font-size: var(--font-size-big);
-  vertical-align: text-bottom;
-  font-weight: bold;
-  text-shadow: 0 2px var(--white);
 }
 .fb div.followInsta {
   display: none;
@@ -200,4 +184,146 @@ main::before {
   background-position: 93% 93%;
   opacity: .5;
   position: absolute;
+}
+/* #legend {
+  position: absolute;
+  right: 22%;
+  top: 80%;
+  font-weight: 500;
+  font-size: var(--font-size-big);
+}
+#legend div {
+  position: relative;
+}
+#legend div::before {
+  content: '';
+  width: var(--x-large);
+  height: var(--x-large);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  display: inline-block;
+  background-color: #FFF;
+  position: absolute;
+  left: calc( ( -1 * var(--x-large) - .4rem) );
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  background-position: 50%;
+}
+#legend .male::before {
+  background-image: url('/imgs/icons/male.png');
+}
+#legend .female::before {
+  background-image: url('/imgs/icons/female.png');
+} */
+
+.wrap {
+  width: 97%;
+  margin: 0 auto var(--large);
+  border-right: 1px dashed var(--black);
+  text-shadow: 0 1px var(--white);
+}
+.icon {
+  margin-right: var(--x-large);
+  font-size: var(--font-size-big);
+  color: var(--black);
+  width: var(--xx-large);
+  font-weight: 500;
+  text-shadow: 0 1px var(--white);
+}
+.charts {
+  width: 100%;
+  position: relative;
+}
+.chart {
+  position: relative;
+  margin: 2px 0;
+  height: 2rem;
+  font-size: var(--font-size-big);
+  line-height: 2rem;
+  text-align: right;
+  border-radius: var(--small);
+  color: var(--white);
+  text-shadow: 0 1px var(--gray);
+  border: 1px solid var(--black);
+  background-color: var(--blue);
+}
+.chart:before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  display: inline-block;
+  background-color: var(--white);
+  position: absolute;
+  left: calc( -1 * (var(--x-large) / 2) );
+  border-radius: 50%;
+  padding: 0px;
+  border: 1px solid #333;
+  top: -1px;
+  background-position: 50%;
+  border: 4px solid var(--white);
+  top: -.5rem;
+}
+
+.chart.green {
+  background-color: var(--green);
+  color: var(--white);
+}
+.chart.red {
+  background-color: var(--red);
+}
+.chart.orange {
+  background-color: var(--orange);
+}
+
+.alert {
+  position: absolute;
+  color: var(--black);
+  text-shadow: 0 0 var(--gray);
+  max-width: 20rem;
+  line-height: 100%;
+}
+.alert::before {
+  content: '\21B6';
+  font-size: var(--font-size-big);
+  transform: rotate(39deg);
+  display: inline-block;
+}
+.alert.alpha {
+  top: 55%;
+  left: 12%;
+}
+
+
+/* DATA */
+.russia .chart {
+  width: 100%;
+}
+.russia .chart:before {
+  background-image: url('/imgs/flags/RUS.svg');
+}
+.usa .chart {
+  width: 95.7%;
+}
+.usa .chart:before {
+  background-image: url('/imgs/flags/USA.svg');
+}
+.china .chart {
+  width: 94.9%;
+}
+.china .chart:before {
+  background-image: url('/imgs/flags/CHN.svg');
+}
+.israel .chart {
+  width: 92.5%;
+}
+.israel .chart:before {
+  background-image: url('/imgs/flags/ISR.svg');
+}
+.south-korea .chart {
+  width: 81.1%;
+}
+.south-korea .chart:before {
+  background-image: url('/imgs/flags/KOR.svg');
 }
