@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3.8rem;
-  --font-size-big: 1.6rem;
+  --font-size-bigger: 3rem;
+  --font-size-big: 1.4rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -53,15 +53,10 @@ h1 {
   font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 3px var(--white);
+  text-shadow: 0 2px var(--white);
 }
 h2 {
   margin: 0;
-}
-
-.desc {
-  font-size: var(--font-size-big);
-  margin: var(--small) 0;
 }
 
 small {
@@ -89,9 +84,6 @@ header {
   align-items: center;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
-}
-.in header {
-  padding: 0 var(--large);
 }
 header img {
   width: 40%;
