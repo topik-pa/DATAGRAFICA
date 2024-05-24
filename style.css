@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3rem;
-  --font-size-big: 1.4rem;
+  --font-size-bigger: 3.8rem;
+  --font-size-big: 1.6rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -258,9 +258,10 @@ main::before {
   text-align: right;
   border-radius: var(--small);
   color: var(--white);
-  text-shadow: 0 2px var(--gray);
+  text-shadow: 0 2px var(--black);
   border: 1px solid var(--black);
   background-color: var(--blue);
+  font-weight: 550;
 }
 .chart:before {
   content: '';
@@ -288,7 +289,7 @@ main::before {
 .chart.red {
   background-color: var(--red);
 }
-.chart.orange {
+.chart.top {
   background-color: var(--orange);
 }
 
