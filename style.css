@@ -17,8 +17,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 3rem;
-  --font-size-big: 1.4rem;
+  --font-size-bigger: 3.8rem;
+  --font-size-big: 1.6rem;
   --font-size-small: .75rem;
 
   --first-color: var(--blue);
@@ -57,6 +57,11 @@ h1 {
 }
 h2 {
   margin: 0;
+}
+
+.desc {
+  font-size: var(--font-size-big);
+  margin: var(--small) 0;
 }
 
 small {
