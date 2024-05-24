@@ -26,7 +26,7 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
 }
 
@@ -35,7 +35,7 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg18.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -49,7 +49,6 @@ body {
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
   text-shadow: 0 2px var(--white);
@@ -65,7 +64,7 @@ small {
 }
 
 em {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 li {
@@ -80,15 +79,15 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
   height: 12rem;
 }
 header img {
-  padding: var(--large);
   margin-left: 5%;
   border-radius: var(--medium);
+  border: 1px solid var(--black);
 }
 header .source {
   font-style: italic;
@@ -134,7 +133,6 @@ footer span {
   width: 100%;
   bottom: var(--footer-height);
   margin-bottom: var(--small);
-  color: var(--white);
   text-shadow: 0 1px var(--gray);
 }
 #logo img {
@@ -219,4 +217,57 @@ main img {
 }
 .chart.orange {
   background-color: var(--orange);
+}
+
+
+span.portal {
+  width: 400px;
+  height: 200px;
+  display: inline-block;
+  background-size: 130%;
+  background-position: 50%;
+}
+span.portal.tezenis {
+  background-image: url('/imgs/tezenis.png');
+}
+span.portal.intimissimi {
+  background-image: url('/imgs/intimissimi.png');
+}
+span.portal.ovs {
+  background-image: url('/imgs/ovs.png');
+}
+span.portal.benetton {
+  background-image: url('/imgs/benetton.png');
+}
+span.portal.terranova {
+  background-image: url('/imgs/terranova.png');
+}
+
+span.portal::before {
+  content: '';
+  width: 400px;
+  height: 50px;
+  background-color: var(--white);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+span.portal.tezenis::before {
+  content: 'TEZENIS';
+}
+span.portal.intimissimi::before {
+  content: 'INTIMISSIMI';
+}
+span.portal.ovs::before {
+  content: 'OVS';
+}
+span.portal.benetton::before {
+  content: 'BENETTON';
+}
+span.portal.terranova::before {
+  content: 'TERRANOVA';
 }

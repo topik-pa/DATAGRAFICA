@@ -26,7 +26,7 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
 }
 
@@ -35,7 +35,7 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg18.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -49,7 +49,6 @@ body {
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
   text-shadow: 0 2px var(--white);
@@ -65,7 +64,7 @@ small {
 }
 
 em {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 li {
@@ -80,15 +79,15 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--large);
   text-shadow: 0 1px var(--gray);
   height: 12rem;
 }
 header img {
-  padding: var(--large);
   margin-left: 5%;
   border-radius: var(--medium);
+  border: 1px solid var(--black);
 }
 header .source {
   font-style: italic;
@@ -134,7 +133,6 @@ footer span {
   width: 100%;
   bottom: var(--footer-height);
   margin-bottom: var(--small);
-  color: var(--white);
   text-shadow: 0 1px var(--gray);
 }
 #logo img {
