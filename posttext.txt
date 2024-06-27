@@ -1,0 +1,65 @@
+Analisi tecnica dei portali e-commerce.
+Categoria: PRINCIPALI E-COMMERCE DI MODA ITALIANI
+
+I portali sono stati valutati secondo i seguenti criteri:
+1. Performance
+2. Accessibilità
+3. Best practice
+4. SEO 
+5. Sicurezza
+
+In generale le performance sono gravate da una interfaccia ricca e immagini ad alta risoluzione, dovute al fatto che il prodotto venduto debba essere ben visibile fin nei suoi piccoli particolari. Un possibile ottimizzazione potrebbe derivare dall'utilizzo dei tag <picture> e <source> per caricare immagini di differente grandezza a seconda delle dimensioni dello schermo. Per esempio:
+<picture> 
+  <source media="(max-width: 414px)" srcset="/path/to/img/img-414.webp">
+  <source media="(max-width: 768px)" srcset="/path/to/img/img-768.webp">
+  <img fetchpriority="high" src="/path/to/img/img-default.webp" alt="...">
+</picture>
+
+L'accessibilità e le regole SEO sono in generale sviluppati in maniera sufficente ma senza senza politiche applicative ben defiite può capitare che certe sezioni siano carenti da questi punti di vista.
+
+Critico, invece, è il discorso sicurezza: regole basilari e di facile implementazione vengono trascurate offrendo il fianco a diverse tipologie di attacco.
+
+
+Qualche suggerimento
+@tezenis
+Performance
+Evita di usare un DOM di dimensioni eccessive (7.798 elementi)
+Un DOM di grandi dimensioni aumenta l'utilizzo di memoria, causa calcoli di stile più lunghi e genera costosi adattamenti dinamici del layout.
+
+Sicurezza
+HTTP Strict Transport Security (HSTS) header not implemented
+HTTP Strict Transport Security (HSTS) instructs web browsers to visit your site only over HTTPS.
+
+Attenzione: l'implementazione dei livelli di sicurezza sembra essere carente sotto diversi punti di vista
+Attenzione: c'è un BUG di visualizzazione UI su device di larghezza compresa tra i 640 e i 768 pixel, in tali casi la UI i contenuti sono completamente oscurati. Possibile che non ve ne siate accorti?
+
+
+@intimissimi
+Performance
+Rimanda il caricamento delle immagini fuori schermo
+Potresti usare il caricamento lento per le immagini fuori schermo e nascoste al termine del caricamento di tutte le risorse fondamentali per ridurre il tempo all'interattività. 
+
+
+@ovs
+Accessibilità
+Alcuni elementi immagine non hanno attributi [alt]
+Per esempio: <img src="https://ovsspaclienti.file.force.com/servlet/servlet.ImageServer?id=0155p0…" class="esw-custom_icon">
+
+
+@benetton
+Performance
+Pubblica immagini in formati più recenti
+I formati delle immagini come WebP e AVIF spesso consentono una compressione migliore rispetto a quella dei formati PNG o JPEG, che comporta download più veloci e un minor consumo di dati.
+
+
+@terranova
+Accessibilità
+Il rapporto di contrasto tra i colori di sfondo e primo piano non è sufficiente.
+Il testo a basso contrasto è difficile, se non impossibile, da leggere per molti utenti.
+Per esempio: label "Cambia paese"
+
+
+L'analisi è stata svolta con l'ausilio di strumenti quali Google Lighthouse e Mozilla Observatory.
+Per avere maggiori informazioni circa i risultati:
+https://developer.chrome.com/docs/lighthouse?hl=it
+https://observatory.mozilla.org/
