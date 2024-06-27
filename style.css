@@ -1,0 +1,84 @@
+@import 'icons.css';
+
+:root {
+  --black: #171717;
+  --gray: #777777;
+  --white: #EEEEEE;
+  --blue: #5180df;
+  --red: #dd2e2e;
+  --orange: #db700c;
+  --green: #3b6936;
+
+  --footer: #255877;
+  --footer-height: 2.4rem;
+
+  --small: .3rem;
+  --medium: .7rem;
+  --large: 1rem;
+  --x-large: 2rem;
+
+  --font-size-bigger: 3rem;
+  --font-size-big: 1.4rem;
+  --font-size-small: .75rem;
+
+  --first-color: var(--blue);
+  --second-color: var(--orange);
+
+  --doc-width: 1200px;
+  --doc-height: 630px;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  width: 100%;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+  position: relative;
+}
+body {
+  height: var(--doc-height);
+  width: var(--doc-width);;
+}
+
+
+h1 {
+  font-size: var(--font-size-bigger);
+  line-height: 100%;
+  margin: 0;
+  text-shadow: 0 2px var(--white);
+}
+
+small {
+  display: block;
+  font-size: var(--font-size-small);
+  font-weight: normal;
+}
+
+em {
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+  margin: var(--large) 0;
+}
+
+a {
+  color: inherit;
+}
+
+
+
+/*MAIN*/
+main {
+
+}
