@@ -18,19 +18,21 @@
   --x-large: 2rem;
 
   --font-size-bigger: 3rem;
-  --font-size-big: 1.4rem;
-  --font-size-small: .75rem;
+  --font-size-big: 1.8rem;
+  --font-size-small: .85rem;
 
   --first-color: var(--blue);
   --second-color: var(--orange);
 
   --doc-width: 1200px;
   --doc-height: 630px;
+
+  --section-color: var(--red)
 }
 
 html {
   font-family: "Nunito", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 body {
@@ -54,7 +56,9 @@ h1 {
   font-size: var(--font-size-bigger);
   line-height: 100%;
   margin: 0;
-  text-shadow: 0 2px var(--white);
+}
+h2, h3 {
+  margin: 0;
 }
 
 small {
@@ -80,5 +84,83 @@ a {
 
 /*MAIN*/
 main {
-
+  counter-reset: title;
 }
+
+.top, .bottom {
+  height: calc( var(--doc-height) * 0.4 );
+  width: 100%;
+  background-color: var(--white);
+
+  display: flex;
+}
+.mid {
+  height: calc( var(--doc-height) * 0.2 );
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--x-large);
+}
+
+
+.top > div, .bottom > div {
+  width: 20%;
+  position: relative;
+}
+
+.top {
+  --section-color: var(--blue)
+}
+.top > div::before, .bottom > div::before {
+  counter-increment: title;
+  content: counter(title);
+  width: calc( var(--x-large) * 1.5);
+  height: calc( var(--x-large) * 1.5);
+  font-size: var(--font-size-big);
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  line-height: var(--x-large);
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--section-color);
+}
+
+
+h2 {
+  color: var(--white);
+  background-color: var(--section-color);
+  text-align: center;
+  width: 90%;
+  margin: 1.5rem auto;
+  font-size: 1.2rem;
+
+  position: relative;
+  z-index: 9;
+}
+
+.top p, .bottom p {
+  color: var(--black);
+  width: 54%;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  margin: 0;
+  font-weight: 550;
+}
+
+.top img, .bottom img {
+  position: absolute;
+  top: .8rem;
+  left: .5rem;
+}
+
