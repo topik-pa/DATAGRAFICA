@@ -226,6 +226,7 @@ footer img {
   height: 7rem;
   margin: 0.5rem;
   bottom: 6.3rem;
+  visibility: hidden;
 }
 footer span {
   display: block;
