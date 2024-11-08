@@ -17,8 +17,8 @@
   --coding: rgb(153, 153, 153);
   --sec: rgb(150, 209, 243);
 
-  --topic: #F58233;
-  --cipot: #33a6f5;
+  --topic: var(--css);
+  --cipot: #9e3a00;
 
   --footer: #255877;
   --footer-height: 2.4rem;
