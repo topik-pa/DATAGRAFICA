@@ -9,15 +9,15 @@
   --orange: #ca6303;
   --green: #3b6936;
 
-  --html: rgb(239, 89, 49);
-  --css: rgb(0, 100, 158);
-  --js: rgb(245, 130, 51);
-  --eng: rgb(249, 188, 16);
-  --node: rgb(2, 110, 0);
-  --coding: rgb(153, 153, 153);
-  --sec: rgb(150, 209, 243);
+  --html: #ef5931;
+  --css: #00649e;
+  --js: #f58233;
+  --eng: #f9bc10;
+  --node: #026e00;
+  --coding: #999999;
+  --sec: #96d1f3;
 
-  --topic: #F58233;
+  --topic: var(--js);
   --cipot: #33a6f5;
 
   --footer: #255877;
