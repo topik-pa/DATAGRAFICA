@@ -35,7 +35,7 @@ body {
   margin: 0;
   color: var(--black);
   width: 100%;
-  background-image: url('/imgs/bgs/bg2.png');
+  background-image: url('/imgs/bgs/bg4.jpeg');
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -50,10 +50,10 @@ body.in {
 
 h1 {
   font-size: var(--font-size-bigger);
-  font-family: 'Arvo', serif;
   line-height: 100%;
   margin: 0;
   text-shadow: 0 2px var(--white);
+  margin-bottom: 2rem;
 }
 h2 {
   margin: 0;
@@ -86,11 +86,11 @@ header {
   text-shadow: 0 1px var(--gray);
 }
 header img {
-  width: 40%;
+  width: 30%;
   margin-right: 5%;
-  padding: var(--large);
+  /* padding: var(--large);
   border: 1px solid var(--black);
-  border-radius: var(--medium);
+  border-radius: var(--medium); */
 }
 header .source {
   font-style: italic;
@@ -119,7 +119,9 @@ header .source {
 }
 .fb footer span {
   color: var(--red);
-  vertical-align: middle;
+  vertical-align: top;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 .in footer {
   display: none;
@@ -131,9 +133,9 @@ header .source {
   font-size: var(--font-size-big);
   position: absolute;
   width: 100%;
-  bottom: var(--footer-height);
+  bottom: 2rem;
   margin-bottom: var(--small);
-  color: var(--white);
+  color: var(--black);
   text-shadow: 0 1px var(--gray);
 }
 #logo img {
@@ -246,7 +248,7 @@ main::before {
   border: 1px solid var(--black);
   background-color: var(--blue);
 }
-.chart:before {
+/* .chart:before {
   content: '';
   width: 2.4rem;
   height: 2.4rem;
@@ -263,7 +265,7 @@ main::before {
   background-position: 50%;
   border: 4px solid var(--white);
   top: -.5rem;
-}
+} */
 
 .chart.green {
   background-color: var(--green);
@@ -296,33 +298,42 @@ main::before {
 
 
 /* DATA */
-.russia .chart {
-  width: 100%;
+.wrap:nth-of-type(1) .chart {
+  width: calc(25.59% * 3.8);
 }
-.russia .chart:before {
-  background-image: url('/imgs/flags/RUS.svg');
+
+.wrap:nth-of-type(2) .chart {
+  width: calc(11.94% * 3.8);
 }
-.usa .chart {
-  width: 95.7%;
+
+.wrap:nth-of-type(3) .chart {
+  width: calc(11.64% * 3.8);
 }
-.usa .chart:before {
-  background-image: url('/imgs/flags/USA.svg');
+
+.wrap:nth-of-type(4) .chart {
+  width: calc(7.85% * 3.8);
 }
-.china .chart {
-  width: 94.9%;
+
+.wrap:nth-of-type(5) .chart {
+  width: calc(6.2% * 3.8);
 }
-.china .chart:before {
-  background-image: url('/imgs/flags/CHN.svg');
+
+.wrap:nth-of-type(6) .chart {
+  width: calc(4.72% * 3.8);
 }
-.israel .chart {
-  width: 92.5%;
+
+.wrap:nth-of-type(7) .chart {
+  width: calc(3.36% * 3.8);
 }
-.israel .chart:before {
-  background-image: url('/imgs/flags/ISR.svg');
+
+.wrap:nth-of-type(8) .chart {
+  width: calc(2.54% * 3.8);
 }
-.south-korea .chart {
-  width: 81.1%;
+
+.wrap:nth-of-type(9) .chart {
+  width: calc(1.76% * 3.8);
 }
-.south-korea .chart:before {
-  background-image: url('/imgs/flags/KOR.svg');
+
+.wrap:nth-of-type(10) .chart {
+  width: calc(1.68% * 3.8);
 }
