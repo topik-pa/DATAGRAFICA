@@ -152,5 +152,6 @@ a {
   border: 1px solid var(--white);
   border-right: 0;
   font-style: italic;
-  color: var(--orange);
+  color: var(--white);
+  font-weight: bold;
 }
