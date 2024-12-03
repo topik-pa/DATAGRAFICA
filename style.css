@@ -170,8 +170,8 @@ main img {
   border: 5px solid var(--cipot);
   padding: .4rem;
   border-radius: .4rem;
-  width: 620px;
-  height: 620px;
+  width: 640px;
+  height: 640px;
 }
 main #img {
   position: absolute;
