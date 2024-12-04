@@ -128,6 +128,7 @@ a {
 
 /*MAIN*/
 main {
+  padding: .7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,7 +200,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   height: 4vh;
-  padding: .3rem 0;
+  padding: .7rem;
   background-color: transparent;
   color: var(--black);
   font-weight: 500;
