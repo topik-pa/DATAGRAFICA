@@ -9,7 +9,7 @@
   --orange: #ca6303;
   --green: #3b6936;
 
-  --html: #ef5931;
+  --html: #ef5931; /*#ef5931*/
   --css: #00649e; /*#9e3a00*/
   --js: #f58233; /*33a6f5*/
   --eng: #f9bc10;
@@ -17,8 +17,8 @@
   --coding: #999999;
   --sec: #96d1f3;
 
-  --topic: var(--js);
-  --cipot: #33a6f5;
+  --topic: var(--html);
+  --cipot: #31C7EF;
 
   --footer: #255877;
   --footer-height: 2.4rem;
@@ -142,6 +142,7 @@ main h1 {
   text-shadow: 1px 1px var(--black);
   letter-spacing: 7px;
   margin-bottom: var(--medium);
+  line-height: 115%;
 }
 main h2 {
   font-weight: 400;
@@ -153,7 +154,6 @@ main h2 span {
 }
 main h1 span {
   color: var(--topic);
-  text-transform: uppercase;
 }
 main .left {
   margin-top: -5rem;
@@ -170,7 +170,7 @@ main img {
   border: 5px solid var(--cipot);
   padding: .4rem;
   border-radius: .4rem;
-  width: 640px;
+  width: 810px;
   height: 640px;
 }
 main #img {
@@ -234,5 +234,5 @@ footer span {
   transform: rotate(28deg);
   background: var(--gray);
   border: 4px solid var(--topic);
-  transform: rotate(30deg) translate(-22%, 7%);
+  transform: rotate(30deg) translate(-36%, 7%)
 }
