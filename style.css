@@ -9,7 +9,7 @@
   --orange: #ca6303;
   --green: #3b6936;
 
-  --html: #ef5931;
+  --html: #ef5931; /*#31C7EF*/
   --css: #00649e; /*#9e3a00*/
   --js: #f58233; /*33a6f5*/
   --eng: #f9bc10;
@@ -17,8 +17,8 @@
   --coding: #999999;
   --sec: #96d1f3;
 
-  --topic: var(--js);
-  --cipot: #33a6f5;
+  --topic: var(--html);
+  --cipot: #31C7EF;
 
   --footer: #255877;
   --footer-height: 2.4rem;
