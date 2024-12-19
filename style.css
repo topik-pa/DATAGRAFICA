@@ -17,7 +17,7 @@
   --coding: #999999;
   --sec: #96d1f3;
 
-  --topic: #CE2B37;
+  --topic: var(--js);
   --cipot: #33a6f5;
 
   --footer: #255877;
@@ -30,7 +30,7 @@
 
   --font-size-bigger: 2.4rem;
   --font-size-big: 1.4rem;
-  --font-size-small: 1rem;
+  --font-size-small: .75rem;
 
   --border-radius-small: .3rem;
 
@@ -38,7 +38,7 @@
   --second-color: var(--orange);
 
   --doc-width: 1080px;
-  --doc-height: 1080px;
+  --doc-height: 1350px;
 
   --css-property: #6f87c9;
   --css-value: #d85858;
@@ -106,10 +106,8 @@ h1 {
 
 small {
   display: block;
-  font-size: 1.5rem;
+  font-size: var(--font-size-small);
   font-weight: normal;
-  position: absolute;
-  top: 86%;
 }
 
 em {
@@ -136,6 +134,7 @@ main {
   align-items: center;
   flex-grow: 1;
   font-family: "Source Code Pro", monospace;
+  text-shadow: 1px 1px var(--black);
   background: rgb(88,88,88);
   background: linear-gradient(177deg, rgba(88,88,88,1) 2%, rgba(221,221,221,1) 18%, rgba(255,255,255,0) 60%);
 }
@@ -156,7 +155,7 @@ main h1 span {
   color: var(--topic);
   text-transform: uppercase;
 }
-/* main .left {
+main .left {
   margin-top: -5rem;
   text-align: center;
   margin-top: 1.2rem;
@@ -165,13 +164,14 @@ main .right {
   position: relative;
   margin-top: .7rem;
   margin-right: 0.4rem;
-} */
+}
 main img {
   position: relative;
+  border: 5px solid var(--cipot);
   padding: .4rem;
   border-radius: .4rem;
-  width: auto;
-  height: 760px;
+  width: 640px;
+  height: 640px;
 }
 main #img {
   position: absolute;
@@ -227,7 +227,6 @@ footer img {
   height: 8rem;
   margin: 0.5rem 1rem;
   bottom: .7rem;
-  border-radius: 50%;
 }
 footer span {
   display: block;
@@ -235,46 +234,5 @@ footer span {
   transform: rotate(28deg);
   background: var(--gray);
   border: 4px solid var(--topic);
-  transform: rotate(30deg) translate(-19%, 10%);
-}
-
-
-.image {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- flex-direction: column;
-}
-.image p {
-  font-size: 3.6rem;
-  margin: 1rem;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.labels {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.label {
-  border: 3px solid var(--gray);
-  padding: 0.4rem 1rem;
-  margin: 5rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  border-radius: .3rem;
-  width: 9rem;
-}
-
-
-#spaghetti {
-
+  transform: rotate(30deg) translate(-22%, 7%);
 }
