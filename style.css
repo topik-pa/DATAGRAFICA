@@ -2,7 +2,7 @@
 
 :root {
   --black: #171717;
-  --gray: #585858;
+  --gray: #3a3a3a;
   --white: #EEEEEE;
   --blue: #5180df;
   --red: #dd2e2e;
@@ -18,7 +18,7 @@
   --sec: #96d1f3;
 
   --topic: var(--js);
-  --cipot: #33a6f5;
+  --cipot: #0775be;
 
   --footer: #255877;
   --footer-height: 2.4rem;
@@ -28,7 +28,8 @@
   --large: 1rem;
   --x-large: 2rem;
 
-  --font-size-bigger: 2.4rem;
+  --font-size-huge: 5.4rem;
+  --font-size-bigger: 3.4rem;
   --font-size-big: 1.4rem;
   --font-size-small: .75rem;
 
@@ -129,24 +130,29 @@ a {
 /*MAIN*/
 main {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-grow: 1;
   font-family: "Source Code Pro", monospace;
   text-shadow: 1px 1px var(--black);
   background: rgb(88,88,88);
-  background: linear-gradient(177deg, rgba(88,88,88,1) 2%, rgba(221,221,221,1) 18%, rgba(255,255,255,0) 60%);
+  /* background: linear-gradient(177deg, rgba(88,88,88,1) 2%, rgba(221,221,221,1) 18%, rgba(255,255,255,0) 60%); */
+  background: linear-gradient(177deg, rgba(255,255,255,1) 2%, rgba(221,221,221,1) 80%, rgba(88,88,88,0) 96%);
+  padding: 0.7rem 1rem;
+  color: var(--gray);
 }
 main h1 {
   text-shadow: 1px 1px var(--black);
   letter-spacing: 7px;
   margin-bottom: var(--medium);
+  text-align: center;
+  text-shadow: 1px 1px var(--white);
 }
 main h2 {
   font-weight: 400;
   color: var(--black);
-  text-shadow: 1px 1px var(--white);
+  
 }
 main h2 span {
   font-weight: bold;
@@ -154,6 +160,8 @@ main h2 span {
 main h1 span {
   color: var(--topic);
   text-transform: uppercase;
+  font-size: var(--font-size-huge);
+  text-shadow: 1px 1px var(--black);
 }
 main .left {
   margin-top: -5rem;
@@ -235,4 +243,9 @@ footer span {
   background: var(--gray);
   border: 4px solid var(--topic);
   transform: rotate(30deg) translate(-22%, 7%);
+}
+
+.question {
+  color: var(--cipot);
+  text-shadow: 1px 1px var(--black);
 }
